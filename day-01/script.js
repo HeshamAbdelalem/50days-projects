@@ -1,7 +1,17 @@
-console.log('connecteddd');
+const panels = document.querySelectorAll('.panel');
 
-const imgs = document.querySelectorAll('.pic');
+function addActiveClasses() {
+  panels.forEach((panel) => {
+    panel.addEventListener('click', () => {
+      console.log(`you clicked`);
+      panel.classList.toggle('active');
+    });
+  });
+}
 
-imgs.forEach((img) =>
-  img.addEventListener('click', () => img.classList.toggle('active'))
-);
+function removeActiveClasses() {
+  panels.forEach((panel) => {
+    panel.classList.remove('active');
+  });
+}
+addActiveClasses();

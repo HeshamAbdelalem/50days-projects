@@ -10,10 +10,11 @@ body {
   align-items: center;
   height: 100vh;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .container {
-  width: 70vw;
+  width: 90vw;
   display: flex;
   flex-direction: row;
 }
@@ -48,4 +49,19 @@ body {
 .panel:hover h3 {
   opacity: 1;
   transition: all 0.5s ease-in 0.3s;
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    width: 95vw;
+    flex-direction: column;
+    height: 70vh;
+  }
+  .container.panel {
+    height: 50px;
+  }
+  /* .panel:nth-of-type(5),
+  .panel:nth-of-type(6) {
+    display: none;
+  } */
 }
